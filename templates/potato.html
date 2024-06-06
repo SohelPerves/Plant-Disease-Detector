@@ -1,0 +1,175 @@
+<!-- potato.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Potato Page</title>
+    <!-- Add enhanced styles specific to the Potato page here -->
+    <style>
+      body {
+        background-color: #00b487;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: 'Arial', sans-serif;
+      }
+
+      .container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        max-width: 600px;
+        width: 80%;
+      }
+
+      h1 {
+        color: #02ab40;
+      }
+
+      form {
+        max-width: 400px;
+        margin: auto;
+      }
+
+      .upload-container {
+        border: 2px dashed #02ab40;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #f8f9fa;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: #555;
+        text-align: left;
+      }
+
+      input {
+        display: none;
+      }
+
+      .upload-label {
+        cursor: pointer;
+        color: #02ab40;
+        text-decoration: underline;
+      }
+
+      .upload-label:hover {
+        color: #0056b3;
+      }
+
+      button {
+        background-color: #02ab40;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #04db53;
+      }
+
+      .alert {
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: left;
+      }
+
+      .alert-danger {
+        background-color: #ffc2c2;
+        border: 1px solid #ff8484;
+        color: #d9534f;
+      }
+
+      .alert-success {
+        background-color: #d4edda;
+        border: 1px solid #c3e6cb;
+        color: #155724;
+      }
+
+      .img-container {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      img {
+        max-width: 100%;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .back-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #ffffff;
+        color: #000000;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      .back-button:hover {
+        background-color: #babfc5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Detect Potato Disease</h1>
+      <form action="/potato" method="post" enctype="multipart/form-data">
+        <div class="upload-container">
+          <label for="file" class="upload-label"
+            >Choose an image of a potato leaf</label
+          >
+          <input
+            type="file"
+            name="file"
+            id="file"
+            accept=".jpg, .jpeg, .png"
+            required
+          />
+        </div>
+        <br />
+        <button type="submit">Predict</button>
+      </form>
+      {% if error %}
+      <div class="alert alert-danger" role="alert">{{ error }}</div>
+      {% endif %} {% if predicted_class %}
+      <div class="alert alert-success" role="alert">
+        <strong>Prediction:</strong> {{ predicted_class }} <br />
+        <strong>Confidence:</strong> {{ confidence }}%
+      </div>
+      <div class="img-container">
+        <img src="{{ img_path }}" alt="Predicted Image" />
+      </div>
+
+      <!-- Add suggestion text box -->
+      <form action="/potato" method="post" enctype="multipart/form-data">
+        <label for="suggestion" class="upload-label">Suggestion:</label>
+        <textarea id="suggestion" name="suggestion" rows="4" cols="50" readonly>
+{{ suggestion }}</textarea
+        >
+      </form>
+
+      {% endif %}
+    </div>
+
+    <a href="/" class="back-button">Back</a>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <!-- Add styles specific to the Home page here -->
+    <style>
+      body {
+        background-color: #00b487;
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+      }
+
+      header {
+        background-color: #232323;
+        color: #ffffff;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+    font-size: 24px;
+    font-weight: bold;
+    width: 80px; /* Set a fixed width for the logo */
+    
+  }
+
+  .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+
+      nav {
+        display: flex;
+        gap: 20px;
+      }
+
+      nav a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: #f8f9fa;
+      }
+
+      .container {
+        
+        background-color: #d6d6d6a1;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        max-width: 1400px; /* Increased max-width */
+        width: 80%;
+        margin: 20px auto;
+      }
+    .container h1{
+        
+        color: #232323;
+      }
+      .container p{
+        color: #232323;
+      }
+      .card-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      .card {
+        flex: 1;
+        background-color: #23232339;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        padding: 20px;
+        margin-right: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow */
+        transition: background-color 0.3s, transform 0.3s;
+        cursor: pointer;
+      }
+
+      .card:hover {
+        background-color: #ffffff; /* Color change on hover */
+        transform: scale(1.05); /* Slight scale increase on hover */
+      }
+
+      footer {
+        background-color: #232323; /* #009570db*/
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+  
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="https://i.ibb.co/6YkNmqz/Logo.png" alt="Logo" />
+      </div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/potato">Potato</a>
+        <a href="/suppliments">Suppliments</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h1>Plant Disease Detector</h1>
+      <p>Plant diseases can cause significant damage to crops and reduce yields. Early detection of plant diseases is crucial for maintaining the health of plants and ensuring a good yield.</p>
+
+      <div class="card-container">
+        <div class="card">
+          <h2>Why it is necessary to detect a disease in plant?</h2>
+          <p>
+            <ol> <li><strong>Prevent crop loss:</strong> Early detection of plant diseases can help prevent the spread of the disease to other plants and reduce the risk of crop loss <sup>2</sup>. It can also help farmers take timely action to control the disease and prevent it from spreading to other crops <sup>3</sup>.</li>
+
+<li><strong>Save money:</strong> Early detection can help farmers save money by reducing the need for expensive treatments and pesticides <sup>4</sup>.</li> </ol>
+
+<ol> <li><strong>Prevent crop loss:</strong> Early detection of plant diseases can help prevent the spread of the disease to other plants and reduce the risk of crop loss <sup>2</sup>. It can also help farmers take timely action to control the disease and prevent it from spreading to other crops <sup>3</sup>.</li>
+
+<li><strong>Save money:</strong> Early detection can help farmers save money by reducing the need for expensive treatments and pesticides <sup>4</sup>.</li> </ol> <sup>1</sup> Britannica<br> <sup>2</sup> Britannica<br> <sup>3</sup> Penn State Extension<br> <sup>4</sup> Britannica
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>How to use Plant Diease Detector</h2>
+          <p>
+            <ol type="1">
+              <li>Take a picture to your phone</li>
+              <li>Upload the picture to our website</li>
+              <li>Press the predict button</li>
+              <li>Result will be shown to you</li>
+            </ol>
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>To prevent plant diseases what steps to take?</h2>
+          <p>
+            <ol> <li><strong>Choose the right plants:</strong> Proper plant selection will help prevent both non-infectious and many infectious diseases that are more likely to occur and be more severe if plants are stressed. </li>
+
+<li><strong>Maintain a healthy garden environment:</strong> Keep pruning equipment clean and in good repair. Don’t over-fertilize, and always water in the morning so foliage has time to dry before nightfall.</li>
+
+<li><strong>Understand the mechanism of infection:</strong> Diseases can occur only when a susceptible host plant, a pathogen capable of causing disease, and an environment conducive to disease are present. Break the links in the triangle at any point and disease will not occur. </li>
+
+<li><strong>Utilize cultivars that are resistant to or tolerant of infection:</strong> Many plant species have been bred for resistance to specific diseases. When selecting plants, choose those that are resistant to the diseases that are common in your area.</li>
+
+<li><strong>Apply pesticides judiciously:</strong> Pesticides should be used only when necessary and in accordance with label directions. Overuse of pesticides can lead to the development of pesticide-resistant strains of pathogens and pests, and can harm beneficial insects and other organisms that help control pests.</li> </ol>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer>&copy; All Rights Reserved By Sohel Perves</footer>
+  </body>
+</html>
